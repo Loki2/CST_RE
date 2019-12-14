@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const config = require('../config/database');
+const { get, put, patch, post, del } = require('../functions/handler');
+// const { parse } = require('')
 
-
-router.get('/', (req, res, next) => {
+router.get('/', get, (req, res, next) => {
   let sql = 'SELECT * FROM allow_code';
   let query = config.query(sql, (err, results) => {
     if(err) throw err;
@@ -20,7 +21,10 @@ router.get('/:allow_code_id', (req, res, next) => {
 });
 
 
-router.post('/', (req, res, next) => {
+router.post('/', post,  (req, res, next) => {
+  const body = req.body.Body
+  res.set('Content-Type', 'text/plain')
+  res.send(`You sent: ${body} to Express`)
   const allow_code_title = req.body.allow_code_title;
   const allow_code_desc = req.body.allow_code_desc;
   let sql =`INSERT INTO allow_code (allow_code_title, allow_code_desc) VALUES ("${allow_code_title}", "${allow_code_desc}")`;
@@ -32,7 +36,7 @@ router.post('/', (req, res, next) => {
 });
 
 
-router.put('/:allow_code_id', (req, res, next) => {
+router.put('/:allow_code_id', put, (req, res, next) => {
   const id = req.params.allow_code_id;
   const allow_code_title = req.body.allow_code_title;
   const allow_code_desc = req.body.allow_code_desc;
@@ -47,7 +51,7 @@ router.put('/:allow_code_id', (req, res, next) => {
 
 });
 
-router.delete('/:allow_code_id', (req, res, next) => {
+router.delete('/:allow_code_id', del, (req, res, next) => {
   const id = req.params.allow_code_id;
 
   let sql = `DELETE FROM allow_code WHERE allow_code_id=${id}`;
