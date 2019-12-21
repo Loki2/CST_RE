@@ -88,7 +88,7 @@ router.post('/register', async (req, res, next) => {
         const user = fakeDB.find(user => user.email === email);
         if(user) throw new Error('User already exist');
          //2. Check if not user exist, hash the password
-        const hashPwd = await hash(password, 10);
+        const hashPwd = await hash(password, RS256);//RS256 is jwt algorithm
         //3. Insert the user in database
         fakeDB.push({
             id: fakeDB.length,
