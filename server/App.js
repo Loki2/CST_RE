@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 /*
  **** Users Credential Authentication
  */
-const usersCredential = require('./routes/users')
+//const usersCredential = require('./routes/users')
 
 
 /*
@@ -20,13 +20,14 @@ const serviceType = require('./routes/service_type');
 const clients = require('./routes/client');
 const employees = require('./routes/employees');
 const deptype = require('./routes/dept_type');
-
+const userRouter = require('./routes/users/users.Router')
 /*
  **** Use Morgan For info each routes memory in the cache
  */
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.json());
 
 /*
  **** Middle ware Authorization  here
@@ -44,7 +45,7 @@ app.use((req, res, next) => {
 /*
  **** Users routes Credential Authentication
  */
-app.use('/users', usersCredential);
+app.use('/users', userRouter);
 
 
 
