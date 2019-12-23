@@ -1,4 +1,4 @@
-const config = require('../../config/database');
+const config = require("../../config/database");
 
 module.exports = {
     create: (data, callback) => {
@@ -19,7 +19,7 @@ module.exports = {
             return callback(null, results)
         });
     },
-    getUser: callback => {
+    getUsers: callback => {
         config.query(
             `SELECT user_id,employee_id, username, email, password, confirm_password, role_id from users`,
             [],
@@ -43,6 +43,18 @@ module.exports = {
             }
         )
     },
+    getByUserEmail: (email, callBack) => {
+        pool.query(
+          `select * from users where email = ?`,
+          [email],
+          (error, results, fields) => {
+            if (error) {
+              callBack(error);
+            }
+            return callBack(null, results[0]);
+          }
+        );
+      },
     updateUser: (data, callback) => {
         config.query(
             `UPDATE users SET employee_id=?, username=?, email=?, password=?, confirm_password=?, role_id=? from users WHERE user_id=?`,
@@ -63,7 +75,7 @@ module.exports = {
             }
         )
     },
-    delUser: (id, callback) =>{
+    delUser: (data, callback) =>{
         config.query(`DELETE FROM users WHERE user_id = ?`,
         [data.user_id],
         (error, results, fields) => {
@@ -71,7 +83,6 @@ module.exports = {
                 return callback(error);
             }
             return callback(null, results[0]);
-        }
-        )
+        });
     }
 };

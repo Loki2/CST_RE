@@ -1,6 +1,6 @@
-const { create, getUsers, getByUserId, updateUser, delUser } = require('./users.service');
+const { create, getUsers, getByUserId, updateUser, delUser, getByUserEmail } = require("./users.service");
 
-const { getSaltSync } = require('bcryptjs')
+const { getSaltSync } = require("bcryptjs")
 
 module.exports = {
     createUser: (req, res) => {
@@ -21,6 +21,37 @@ module.exports = {
             });
         });
     },
+    login: (req, res) => {
+        const body = req.body;
+        getByUserEmail(body.email, (err, results) => {
+          if (err) {
+            console.log(err);
+          }
+          if (!results) {
+            return res.json({
+              success: 0,
+              data: "Invalid email or password"
+            });
+          }
+          const result = compareSync(body.password, results.password);
+          if (result) {
+            results.password = undefined;
+            const jsontoken = sign({ result: results }, "qwe1234", {
+              expiresIn: "30m"
+            });
+            return res.json({
+              success: 1,
+              message: "login successfully",
+              token: jsontoken
+            });
+          } else {
+            return res.json({
+              success: 0,
+              data: "Invalid email or password"
+            });
+          }
+        });
+      },
     getByUserId: (req, res, next) =>{
         const id = req.pramas.user_id;
         getByUserId(id, (err, results) => {
@@ -88,8 +119,3 @@ module.exports = {
     }
     
 }
-// function getChart(){
-
-// }
-
-// module.exports = { getChart }
