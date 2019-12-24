@@ -1,5 +1,4 @@
 const { create, getUsers, getByUserId, updateUser, delUser, getByUserEmail } = require("./users.service");
-
 const { getSaltSync } = require("bcryptjs")
 
 module.exports = {
