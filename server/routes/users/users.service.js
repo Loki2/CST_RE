@@ -31,7 +31,7 @@ module.exports = {
             }
         )
     },
-    getByUserId: (id, callback) => {
+    getByUserId: (user_id, callback) => {
         config.query(
             `SELECT user_id,employee_id, username, email, password, confirm_password, role_id from users WHERE user_id=?`,
             [user_id],
@@ -65,7 +65,7 @@ module.exports = {
                 data.password,
                 data.confirm_password,
                 data.role_id,
-                data.user_id,
+                data.user_id
             ],
             (error, results, fields) => {
                 if(error) {
@@ -73,16 +73,17 @@ module.exports = {
                 }
                 return callback(null, results[0]);
             }
-        )
+        );
     },
     delUser: (data, callback) =>{
         config.query(`DELETE FROM users WHERE user_id = ?`,
-        [data.user_id],
-        (error, results, fields) => {
-            if(error) {
-                return callback(error);
+            [data.user_id],
+            (error, results, fields) => {
+                if(error) {
+                    return callback(error);
+                }
+                return callback(null, results[0]);
             }
-            return callback(null, results[0]);
-        });
+        );
     }
 };

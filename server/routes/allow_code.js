@@ -4,7 +4,7 @@ const config = require('../config/database');
 const { get, put, patch, post, del } = require('../functions/handler');
 // const { parse } = require('')
 
-router.get('/', get, (req, res, next) => {
+router.get('/', (req, res, next) => {
   let sql = 'SELECT * FROM allow_code';
   let query = config.query(sql, (err, results) => {
     if(err) throw err;
@@ -21,10 +21,10 @@ router.get('/:allow_code_id', (req, res, next) => {
 });
 
 
-router.post('/', post,  (req, res, next) => {
-  const body = req.body.Body
-  res.set('Content-Type', 'text/plain')
-  res.send(`You sent: ${body} to Express`)
+router.post('/', (req, res, next) => {
+  // const body = req.body.Body
+  // res.set('Content-Type', 'text/plain')
+  // res.send(`You sent: ${body} to Express`)
   const allow_code_title = req.body.allow_code_title;
   const allow_code_desc = req.body.allow_code_desc;
   let sql =`INSERT INTO allow_code (allow_code_title, allow_code_desc) VALUES ("${allow_code_title}", "${allow_code_desc}")`;

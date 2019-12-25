@@ -14,7 +14,7 @@ const bodyParser = require('body-parser');
 /*
  **** Import All Routes
  */
-const allowCode = require('./routes/allow_code');
+const allowCode = require('./routes/allowcode/allowcode.Router');
 const serviceCategory = require('./routes/service_category');
 const serviceType = require('./routes/service_type');
 const clients = require('./routes/client');

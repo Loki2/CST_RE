@@ -22,5 +22,5 @@ module.exports = {
         message: "Access Denied! Unauthorized User"
       });
     }
-  }
+  },
 };

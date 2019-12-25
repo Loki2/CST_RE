@@ -1,5 +1,13 @@
-const { create, getUsers, getByUserId, updateUser, delUser, getByUserEmail } = require("./users.service");
 const { getSaltSync } = require("bcryptjs")
+const { 
+        create, 
+        getUsers, 
+        getByUserId, 
+        updateUser, 
+        delUser, 
+        getByUserEmail 
+    } = require("./users.service");
+
 
 module.exports = {
     createUser: (req, res) => {
@@ -51,9 +59,21 @@ module.exports = {
           }
         });
       },
+    getUsers: (req, res) => {
+        getUsers((err, results) => {
+            if(err) {
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success:1,
+                data:results
+            });
+        });
+    },
     getByUserId: (req, res, next) =>{
-        const id = req.pramas.user_id;
-        getByUserId(id, (err, results) => {
+        const user_id = req.params.user_id;
+        getByUserId(user_id, (err, results) => {
              if(err){
                  console.log(err);
                  return;
@@ -68,18 +88,6 @@ module.exports = {
                  success:1,
                  data:results
              });
-        });
-    },
-    getUsers: (req, res) => {
-        getUsers((err, results) => {
-            if(err) {
-                console.log(err);
-                return;
-            }
-            return res.json({
-                success:1,
-                data:results
-            });
         });
     },
     updateUser: (req, res) => {
