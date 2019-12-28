@@ -80,5 +80,8 @@ module.exports = {
                 message: "Delete successfully"
             });
         })
-    }
+    },
+    // getChart: (req, res, next) => {
+        
+    // }
 }

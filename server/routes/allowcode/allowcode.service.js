@@ -41,7 +41,7 @@ const config = require("../../config/database");
      },
     updateAllowCode: (data, callback) => {
         config.query(
-            `UPDATE allow_code SET allow_code_id=?, allow_code_title=?`,
+            `UPDATE allow_code SET allow_code_title=?, allow_code_desc=? WHERE allow_code_id=?`,
             [
                 data.allow_code_title,
                 data.allow_code_desc,
