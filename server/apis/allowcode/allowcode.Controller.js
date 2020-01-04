@@ -25,8 +25,8 @@ module.exports = {
 
     },
     getAllowCode: async (req, res) => {
-        const data = await req.body;
-        getAllowCode(data, (err, results) => {
+        // const data = await req(Option);
+        getAllowCode((err, results) => {
             if(err) {
                 console.log(err);
                 return;
