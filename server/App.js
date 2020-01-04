@@ -14,13 +14,13 @@ const bodyParser = require('body-parser');
 /*
  **** Import All Routes
  */
-const allowCode = require('./routes/allowcode/allowcode.Router');
-const serviceCategory = require('./routes/service_category');
-const serviceType = require('./routes/service_type');
-const clients = require('./routes/client');
-const employees = require('./routes/employees');
-const deptype = require('./routes/dept_type');
-const userRouter = require('./routes/users/users.Router')
+const allowCode = require('./apis/allowcode/allowcode.Router');
+const serviceCategory = require('./apis/service_category');
+const serviceType = require('./apis/service_type');
+const clients = require('./apis/client');
+const employees = require('./apis/employees');
+const deptype = require('./apis/dept_type');
+const userRouter = require('./apis/users/users.Router')
 /*
  **** Use Morgan For info each routes memory in the cache
  */

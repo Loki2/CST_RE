@@ -7,8 +7,8 @@ const {
  } = require("./allowcode.service")
 
 module.exports = {
-    createAllowCode : ( req, res, next) => {
-        const body = req.body;
+    createAllowCode : async ( req, res, next) => {
+        const body = await req.body;
         create(body, (err, results) => {
             if(err) {
                 console.log(err)
@@ -24,8 +24,9 @@ module.exports = {
         });
 
     },
-    getAllowCode: (req, res) => {
-        getAllowCode((err, results) => {
+    getAllowCode: async (req, res) => {
+        const data = await req.body;
+        getAllowCode(data, (err, results) => {
             if(err) {
                 console.log(err);
                 return;
@@ -36,8 +37,8 @@ module.exports = {
             });
         });
     },
-    getByAllowCodeId: (req, res) => {
-        const allow_code_id = req.params.allow_code_id;
+    getByAllowCodeId: async (req, res) => {
+        const allow_code_id = await req.params.allow_code_id;
         getByAllowCodeId(allow_code_id, (err, results) => {
             if(err) {
                 console.log(err);
@@ -49,8 +50,8 @@ module.exports = {
             });
         });
     },
-    updateAllowCode: (req, res, next ) => {
-        const body = req.body;
+    updateAllowCode: async (req, res, next ) => {
+        const body = await req.body;
         updateAllowCode(body, (err, results) => {
             if(err) {
                 console.log(err);
@@ -62,8 +63,8 @@ module.exports = {
             });
         });
     },
-    delAllowCode: (req, res) => {
-        const data = req.body;
+    delAllowCode:  (req, res) => {
+        const data = req.params.allow_code_id;
         delAllowCode(data, (err, results) => {
             if(err) {
                 console.log(err);

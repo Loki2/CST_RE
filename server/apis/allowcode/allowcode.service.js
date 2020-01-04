@@ -56,7 +56,7 @@ const config = require("../../config/database");
         );
     },
     delAllowCode: (data, callback) => {
-       config.query(`DELETE FROM allow_code WHERE allow_code_id = ?`,
+       config.query(`delete from allow_code WHERE allow_code_id = ?`,
         [data.allow_code_id],
         (error, results, fields) => {
             if(error) {

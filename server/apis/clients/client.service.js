@@ -136,6 +136,6 @@ module.exports = {
             }
             return callback(null, results[0]);
         }
-        )
+        );
     }
 }

@@ -33,7 +33,7 @@ module.exports = {
     },
     getByUserId: (user_id, callback) => {
         config.query(
-            `SELECT user_id,employee_id, username, email, password, confirm_password, role_id from users WHERE user_id=?`,
+            `SELECT user_id, employee_id, username, email, password, confirm_password, role_id from users WHERE user_id=?`,
             [user_id],
             (error, results, fields) => {
                 if(error) {
