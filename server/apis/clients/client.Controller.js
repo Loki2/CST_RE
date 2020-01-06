@@ -30,7 +30,24 @@ module.exports = {
         })
     },
     getByClientId : async (req, res, next) => {
-        getByClientId()
-    }
+        const client_id = await req.params.client_id;
+        getByClientId(client_id, (error, results) => {
+            if(error) {
+                console.log(err);
+                return;
+            }
+            if(!results) {
+                return res.json({
+                    success:0,
+                    message:"Record not Found"
+                });
+            }
+            return res.json({
+                success:1,
+                data: results
+            })
+        });
+    },
+    
 
 }
