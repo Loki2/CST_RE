@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const config = require("../config/database");
+const config = require("../../config/database");
 
 
 router.get('/', (req, res, next) => {

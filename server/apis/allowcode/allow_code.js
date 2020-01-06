@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const config = require('../config/database');
-const { get, put, patch, post, del } = require('../functions/handler');
+const config = require('../../config/database');
+const { get, put, patch, post, del } = require('../../functions/handler');
 // const { parse } = require('')
 
 router.get('/', (req, res, next) => {

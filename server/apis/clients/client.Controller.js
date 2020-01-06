@@ -48,6 +48,38 @@ module.exports = {
             })
         });
     },
-    
+    updateClient : async (req, res, next) => {
+        const data = await req.body;
+        updateClient(data, (err, results) => {
+            if(err){
+                console.log(err);
+                return;
+            }
+            return res.json({
+                success:1,
+                message:"Updata Successfully...!",
+                data: results
+            });
+        });
+    },
+    delClient: async (req, res, next) => {
+        const client_id = await req.params.client_id;
+        delClient(client_id, (err, results) => {
+            if(err) {
+                console.log(err);
+                return;
+            }
+            if(!results) {
+                return res.json({
+                    success:0,
+                    message: "Record not found"
+                });
+            }
+            return res.json({
+                success:1,
+                message: "Delete successfully"
+            });
+        });
+    }
 
 }

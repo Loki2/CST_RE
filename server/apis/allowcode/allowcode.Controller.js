@@ -59,12 +59,13 @@ module.exports = {
             }
             return res.json({
                 success:1,
-                message: "Update Successfully...!"
+                message: "Update Successfully...!",
+                data: results
             });
         });
     },
-    delAllowCode:  (req, res) => {
-        const data = req.params.allow_code_id;
+    delAllowCode: async (req, res) => {
+        const data = await req.params.allow_code_id;
         delAllowCode(data, (err, results) => {
             if(err) {
                 console.log(err);

@@ -6,15 +6,15 @@ const { verify } = require('jsonwebtoken');
 const { hash, compare } = require('bcryptjs');
 const router = express.Router();
 //const config = require('../config/database');
-const { fakeDB } = require('../config/fakeDatabase');
+const { fakeDB } = require('../../config/fakeDatabase');
 
 
-const { isAuth } = require('../functions/isAuth');
+const { isAuth } = require('../../functions/isAuth');
 const { createAccessToken, 
         createRefreshToken,
         sendAccessToken,
         sendRefreshToken
-    } = require('../functions/roles');
+    } = require('../../functions/roles');
 /******TO DO:********/
 // 1. Register a users
 // 2. Log user in 

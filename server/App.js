@@ -17,9 +17,9 @@ const bodyParser = require('body-parser');
 const allowCode = require('./apis/allowcode/allowcode.Router');
 const serviceCategory = require('./apis/service_category');
 const serviceType = require('./apis/service_type');
-const clients = require('./apis/client');
-const employees = require('./apis/employees');
-const deptype = require('./apis/dept_type');
+const clients = require('./apis/clients/client.Router');
+const employees = require('./apis/employees/employees');
+const deptype = require('./apis/depts/dept_type');
 const userRouter = require('./apis/users/users.Router')
 /*
  **** Use Morgan For info each routes memory in the cache
