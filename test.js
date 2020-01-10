@@ -1,6 +1,3 @@
-// console.log("Hello, this me")
-
-
 // calculate principle payment
 //ການຄິດໄລເງີນຕົ້ນທື່ນທັງຫມົດຖຸຶກກູ້ຢື່ມໄປ
 //ຈຳນວນປີ, ເງີນຕົ້ນຈທີ່ຕ້ອງຈ່າຍ, ດອກເບ້ຍ 15%, ຄ່າປັບໄຫມເປັນ 20%
@@ -20,29 +17,24 @@ console.log("- Base Default Pay with 15%:" + defaultInterest);
 console.log("- Base Default Penalty Pay with 20%: " + penaltyInterest);
 
 
-
-// for(i=1;i<=term;i++){
-//     console.log("Principle Pay:"+principlepayment);
-//     break;   
-// }
 //calculate normal payment
 //ກວດສອບການຈ່າຍປົກກະຕິ
-//const normalinterest= principlepayment * 15/100;
-// let normalpayment= defaultInterest/term;
-// for(i=1;i<=term;i++){ 
-//     console.log("- Normal Pay:"+normalpayment);
-//     break;
-// }
+const normalinterest= principlepayment * 15/100;
+let normalpayment= defaultInterest/term;
+for(i=1;i<=term;i++){ 
+    console.log("- Normal Pay:"+normalpayment);
+    break;
+}
 
 let penaltyPay = penaltyInterest/term;
 let penalty = penaltyInterest;
 for(i=1; i<=term;i++){
     if(penaltyPay < penalty){
         let count = penaltyInterest - defaultInterest;
-        console.log(count);
+        console.log("- Draft Payment Delay:" + count);
     }else{
         let count = penaltyPay++;
-        console.log(count);
+        console.log("- Payment Delay Results: " + count);
     }
     break;
 }
@@ -52,7 +44,7 @@ for(i=1; i<=term;i++){
 
 // const delaypay = principlepayment * 20/100;
 //ກວດສອບເວລາກ່າຍກຳນົດ
-const deadline = new Date('11/26/2019');
+const deadline = new Date('11/24/2019');
 const datepay = new Date('11/30/2019');
     if(datepay>deadline){
         let diffTime = Math.abs(deadline - datepay);
