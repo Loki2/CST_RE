@@ -19,6 +19,7 @@ module.exports = {
     },
     getClients : async (req, res, next) => {
         getClients((err, results) => {
+            //const response = await res.json(results)
             if(err) {
                 console.log(err);
                 return;
