@@ -4,7 +4,7 @@ module.exports = {
     createClient : async (req, res, next) => {
         const body = await req.body;
         create(body, (error, results) => {
-            if(err) {
+            if(error) {
                 console.log(err)
                 return res.status(500).json({
                     success: 0,

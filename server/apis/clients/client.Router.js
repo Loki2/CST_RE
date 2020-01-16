@@ -6,7 +6,7 @@ const {
         getByClientId, 
         updateClient, 
         delClient 
-    } = require('../clients/client.Controller');
+    } = require('./client.Controller');
 
 router.get('/', getClients);
 router.post('/', createClient);

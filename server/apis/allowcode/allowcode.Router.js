@@ -8,4 +8,5 @@ router.get("/:allow_code_id", getByAllowCodeId);
 router.patch("/:allow_code_id", updateAllowCode);
 router.delete("/:allow_code_id", delAllowCode);
 
+
 module.exports = router;
