@@ -6,6 +6,6 @@ router.get('/', getEmployees);
 router.post('/', createEmpolyee);
 router.get('/:id', getByEmployeeId);
 router.patch('/:id', updateEmployee);
-router.delete('/:id', delEmployeen)
+router.delete('/:id', delEmployee)
 
 module.exports = router;
