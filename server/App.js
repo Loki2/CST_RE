@@ -18,10 +18,9 @@ const allowCode = require('./apis/allowcode/allowcode.Router');
 const serviceCategory = require('./apis/service_category');
 const serviceType = require('./apis/service_type');
 const clients = require('./apis/clients/client.Router');
-const employees = require('./apis/employees/employees');
 const deptype = require('./apis/depts/dept_type');
 const userRouter = require('./apis/users/users.Router');
-//const employeeRoute = require('./apis/employees/employees.Router')
+const employeeRoute = require('./apis/employees/employees.Router')
 /*
  **** Use Morgan For info each routes memory in the cache
  */
@@ -57,7 +56,7 @@ app.use('/allowCode', allowCode);
 app.use('/serviceCategory', serviceCategory);
 app.use('/serviceType', serviceType);
 app.use('/clients', clients);
-app.use('/employees', employees);
+app.use('/employees', employeeRoute);
 app.use('/depts', deptype);
 
 
