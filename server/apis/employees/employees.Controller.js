@@ -1,7 +1,7 @@
 const { create, getEmployees, getByEmployeeId, updateEmployee, delEmployee } = require('./employee.service');
 
 module.exports = {
-    creteEmpolyee: async (req, res, next) => {
+    createEmpolyee: async (req, res, next) => {
         const body = await req.body;
         create(body, (error, results) => {
            if(error) {
