@@ -3,8 +3,8 @@ const { create, getEmployees, getByEmployeeId, updateEmployee, delEmployee } = r
 module.exports = {
     createEmpolyee: async (req, res, next) => {
         const body = await req.body;
-        create(body, (error, results) => {
-           if(error) {
+        create(body, (err, results) => {
+           if(err) {
                 console.log(err);
                 return res.status(500).json({
                     success: 0,

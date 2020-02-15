@@ -1,3 +1,5 @@
+import { response } from "express";
+
 // calculate principle payment
 //ການຄິດໄລເງີນຕົ້ນທື່ນທັງຫມົດຖຸຶກກູ້ຢື່ມໄປ
 //ຈຳນວນປີ, ເງີນຕົ້ນຈທີ່ຕ້ອງຈ່າຍ, ດອກເບ້ຍ 15%, ຄ່າປັບໄຫມເປັນ 20%
@@ -78,95 +80,70 @@ if(delaypay === 0) {
 }
 
 
+const penInterest = delaypay * 20/100;
+const penaltyinterest=12/100;
+let pen=((principle*penaltyinterest/term)* penInterest)+((normalpayment*penaltyinterest/term)*penInterest);
+for(i=1;i<=term;i++){
+    console.log("Penalpay:"+pen);
+    break;
+}
+//total payment
+// //ກວດສອບຫລັງການຈ່າຍ
+var sum = principlepayment+normalpayment+pen;
+console.log("Total:"+sum);
+// // case payment step by step
+let payment=10000;
+console.log("Pen: "+pen);
+console.log("Pay: "+payment);
+if(pen>0){
+    var penpay=payment-pen;
+    for(i=1;i<=term;i++){
+        console.log("Pen Pay: "+penpay);  
+        break;
+    }
+    if(penpay > 0 ){
+        var penn=pen+penpay;
+        console.log(penn);
+    }
+    pen=0;
+    payment = penpay;
+}
+console.log("NP: "+normalpayment);
+console.log("Pay: "+payment);
+ if(pen<=0){
+    var norpay=payment-normalpayment;
+    for(i=1;i<=term;i++){
+        console.log("Normal Pay: "+norpay);
+        break;
+    }
+    if(norpay>0){
+        var principay=norpay-principlepayment;
+        console.log("Prinsum:"+principay);
+    }
+    normalpayment = 0;
+    payment = norpay;
+} 
 
+if(normalpayment<=0){
+    var prinpay=payment-principlepayment;
+    for(i=1;i<=term;i++){
+        console.log("Principle Pay: "+prinpay);
+        break;
+    }
+    if(prinpay > 0 ){
+        var Total=principle-prinpay;
+        console.log(Total);
+    }
+    //principlepayment=0
+    payment=Total;
+}
+var draft=pen+normalpayment;
+console.log(draft);
 
+const payroll = term % year/2;
+console.log("Automate payroll: "+payroll);
 
+// async function getPayroll(res, req, next) {
+//  const sumbutty = await payroll * 100/26;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const penInterest = delaypay * 20/100
-// const penaltyinterest=12/100;
-// let pen=((principle*penaltyinterest/term)* penInterest)+((normalpayment*penaltyinterest/term)*penInterest);
-// for(i=1;i<=term;i++){
-//     console.log("Penalpay:"+pen);
-//     break;
 // }
-// //total payment
-// // //ກວດສອບຫລັງການຈ່າຍ
-// var sum = principlepayment+normalpayment+pen;
-// console.log("Total:"+sum);
-// // // case payment step by step
-// let payment=10000;
-// console.log("Pen: "+pen);
-// console.log("Pay: "+payment);
-// if(pen>0){
-//     var penpay=payment-pen;
-//     for(i=1;i<=term;i++){
-//         console.log("Pen Pay: "+penpay);  
-//         break;
-//     }
-//     if(penpay > 0 ){
-//         var penn=pen+penpay;
-//         console.log(penn);
-//     }
-//     pen=0;
-//     payment = penpay;
-// }
-// console.log("NP: "+normalpayment);
-// console.log("Pay: "+payment);
-//  if(pen<=0){
-//     var norpay=payment-normalpayment;
-//     for(i=1;i<=term;i++){
-//         console.log("Normal Pay: "+norpay);
-//         break;
-//     }
-//     if(norpay>0){
-//         var principay=norpay-principlepayment;
-//         console.log("Prinsum:"+principay);
-//     }
-//     normalpayment = 0;
-//     payment = norpay;
-// } 
-
-// if(normalpayment<=0){
-//     var prinpay=payment-principlepayment;
-//     for(i=1;i<=term;i++){
-//         console.log("Principle Pay: "+prinpay);
-//         break;
-//     }
-//     if(prinpay > 0 ){
-//         var Total=principle-prinpay;
-//         console.log(Total);
-//     }
-//     //principlepayment=0
-//     payment=Total;
-// }
-// var draft=pen+normalpayment;
-// console.log(draft);

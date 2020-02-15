@@ -20,7 +20,7 @@ module.exports = {
     },
 
     getAllDepType: async (req, res, next) => {
-        getDepType((error, results) => {
+        getDepType((err, results) => {
             if(err) {
                 console.log(err);
                 return;

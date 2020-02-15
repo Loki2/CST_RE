@@ -5,9 +5,8 @@ const config = require('../../config/database');
 */
 module.exports = {
     create: (data, callback) => {
-        config.query(`INSERT INTO employees(id, employee_id, department_id, section_id, fullname, lastname, birth_date, age, mental_status_id, gender_id, join_date, address1, address2, city, province, country, remark, status) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,>)`, 
+        config.query(`INSERT INTO employees(employee_id, department_id, section_id, fullname, lastname, birth_date, age, mental_status_id, gender_id, join_date, address1, address2, city, province, country, remark, status) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,>)`, 
         [
-            data.id,
             data.employee_id, 
             data.department_id, 
             data.section_id, 

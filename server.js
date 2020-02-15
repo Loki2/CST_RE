@@ -5,4 +5,6 @@ const app = require('./server/App')
 
 
 const server = http.createServer(app);
-server.listen(process.env.APP_PORT)
+server.listen(process.env.APP_PORT, () => {
+    console.log('Server is starting on Port: ' + process.env.APP_PORT);
+})
