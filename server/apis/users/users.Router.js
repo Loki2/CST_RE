@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { checkToken } = require("../../auth/token_validation");
 const { createUser, getUsers, getByUserId, updateUser, delUser, login } = require("./users.Controller");
 
 router.post("/register",  createUser);

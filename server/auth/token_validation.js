@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 module.exports = {
-  checkToken: (req, res, next) => {
+  checkToken: async (req, res, next) => {
     let token = req.get("authorization");
     if (token) {
       // Remove Bearer from string
@@ -19,7 +19,7 @@ module.exports = {
     } else {
       return res.json({
         success: 0,
-        message: "Access Denied! Unauthorized User"
+        message: "Access Denied! Unauthorized User...!"
       });
     }
   },

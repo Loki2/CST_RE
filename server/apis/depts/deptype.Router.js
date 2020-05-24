@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { checkToken } = require("../../auth/token_validation");
 const { createDepType, getAllDepType, getDepTypeById, updateDepType, delDepType } = require('./deptype.Contoller');
 
 router.get('/', getAllDepType);

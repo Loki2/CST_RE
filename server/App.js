@@ -3,6 +3,7 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 //const config = require('./config/database');
+const { checkToken } = require('./auth/token_validation');
 
 
 /*
@@ -50,7 +51,7 @@ app.use('/users', userRouter);
 
 
 /*
- **** Use All Routes
+ **** Import All Routes
  */
 app.use('/allowCode', allowCode);
 app.use('/serviceCategory', serviceCategory);

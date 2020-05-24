@@ -1,4 +1,4 @@
-import { response } from "express";
+// import { response } from "express";
 
 // calculate principle payment
 //ການຄິດໄລເງີນຕົ້ນທື່ນທັງຫມົດຖຸຶກກູ້ຢື່ມໄປ
@@ -143,7 +143,18 @@ console.log(draft);
 const payroll = term % year/2;
 console.log("Automate payroll: "+payroll);
 
-// async function getPayroll(res, req, next) {
-//  const sumbutty = await payroll * 100/26;
+async function getPayroll(res, req, next) {
+    
+    const sumbutty = await payroll * 100/26;
 
-// }
+
+    try {
+        res.json({ 
+            message:'this is sumbutty',
+            data: sumbutty
+        })
+    } catch (error) {
+        next()
+    }
+
+}

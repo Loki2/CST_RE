@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { checkToken } = require("../../auth/token_validation");
 const { createEmpolyee, getEmployees, getByEmployeeId, updateEmployee, delEmployee } = require('./employees.Controller')
 
 router.get('/', getEmployees);

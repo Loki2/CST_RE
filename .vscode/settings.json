@@ -1,3 +1,5 @@
 {
-    "editor.fontSize": 13
+    "editor.fontFamily": "'Operator Mono Light','Droid Sans Mono', 'Droid Sans Fallback','Noto Sans Lao Light'",
+    "editor.insertSpaces": false,
+    "prettier.tabWidth": 3
 }
