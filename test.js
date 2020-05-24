@@ -156,5 +156,5 @@ async function getPayroll(res, req, next) {
     } catch (error) {
         next()
     }
-
+    console.log('Try to reach this point')
 }
