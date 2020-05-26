@@ -147,7 +147,6 @@ async function getPayroll(res, req, next) {
     
     const sumbutty = await payroll * 100/26;
 
-
     try {
         res.json({ 
             message:'this is sumbutty',
@@ -156,5 +155,5 @@ async function getPayroll(res, req, next) {
     } catch (error) {
         next()
     }
-    console.log('Try to reach this point')
+    
 }
