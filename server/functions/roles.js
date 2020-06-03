@@ -8,8 +8,7 @@ const createAccessToken = userId => {
 }
 const createRefreshToken = userId => {
     return sign({userId} , process.env.REFRESH_TOKEN_SECRET, {
-        expiresIn:'15m',
-        
+        expiresIn:'15m', 
     });
 };
 

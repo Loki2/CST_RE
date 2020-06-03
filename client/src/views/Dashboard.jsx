@@ -20,7 +20,7 @@ import classNames from "classnames";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
 // react plugin for creating vector maps
-import { VectorMap } from "react-jvectormap";
+ import { VectorMap } from "react-jvectormap";
 
 // reactstrap components
 import {
@@ -44,15 +44,12 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-
-// core components
 import {
   chartExample1,
   chartExample2,
   chartExample3,
   chartExample4
 } from "../variables/charts.jsx";
-
 var mapData = {
   AU: 760,
   BR: 550,
@@ -66,7 +63,6 @@ var mapData = {
   RU: 300,
   US: 2920
 };
-
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);

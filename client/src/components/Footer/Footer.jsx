@@ -30,7 +30,7 @@ class Footer extends React.Component {
           <ul className="nav">
             <li className="nav-item">
               <a className="nav-link" href="https://www.creative-tim.com">
-                Creative Tim
+                <strong><h3>Softniz-iShika</h3></strong> 
               </a>
             </li>{" "}
             <li className="nav-item">
@@ -50,10 +50,10 @@ class Footer extends React.Component {
           <div className="copyright">
             © {new Date().getFullYear()} made with{" "}
             <i className="tim-icons icon-heart-2" /> by{" "}
-            <a href="javascript:void(0)" target="_blank">
+            {/* <a href="javascript:void(0)" target="_blank">
               Creative Tim
-            </a>{" "}
-            for a better web.
+            </a>{" "} */}
+						Technology Development
           </div>
         </Container>
       </footer>

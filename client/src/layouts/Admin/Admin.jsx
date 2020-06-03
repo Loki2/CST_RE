@@ -207,8 +207,7 @@ class Admin extends React.Component {
           />
           <Switch>{this.getRoutes(routes)}</Switch>
           {// we don't want the Footer to be rendered on full screen maps page
-          this.props.location.pathname.indexOf("full-screen-map") !==
-          -1 ? null : (
+          this.props.location.pathname.indexOf("full-screen-map") !==-1 ? null : (
             <Footer fluid />
           )}
         </div>

@@ -28,8 +28,7 @@ function post(req, res, next) {
             res.end(body);
         });
     }
-
-    
+		next();
 }
 
 
@@ -107,10 +106,20 @@ function del(req, res, next){
     }
 }
 
+async function getRoleAccess(req, res, next) {
+		try {
+			let role_id = req.body.role_id
+		} catch (error) {
+			
+		}
+}
+
 module.exports = {
     post,
     get,
     put,
     del,
-    patch   
+		patch,
+		
+		getRoleAccess
 };

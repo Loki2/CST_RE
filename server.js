@@ -10,5 +10,5 @@ const PORT = process.env.APP_PORT;
 
 const server = http.createServer(app);
 server.listen(PORT, () => {
-    console.log('Server is starting on Port: ' + PORT);
+    console.log(`Server is starting on Port: ${PORT}`);
 })
