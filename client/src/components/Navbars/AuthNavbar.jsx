@@ -85,8 +85,8 @@ class AuthNavbar extends React.Component {
                   to="/admin/dashboard"
                   className="nav-link text-primary"
                 >
-                  <i className="tim-icons icon-minimal-left" /> Back to
-                  Dashboard
+                  <i className="tim-icons icon-minimal-left" /> 
+									Back to Dashboard 	{/* Check User Authentication -> if(!user) then return back to Register or Login*/}
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -97,11 +97,6 @@ class AuthNavbar extends React.Component {
               <NavItem>
                 <NavLink to="/auth/login" className="nav-link">
                   <i className="tim-icons icon-single-02" /> Login
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/auth/pricing" className="nav-link">
-                  <i className="tim-icons icon-coins" /> Pricing
                 </NavLink>
               </NavItem>
               <NavItem>

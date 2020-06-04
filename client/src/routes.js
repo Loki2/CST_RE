@@ -14,9 +14,6 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import VectorMap from "./views/maps/VectorMap.jsx";
-import GoogleMaps from "./views/maps/GoogleMaps.jsx";
-import FullScreenMap from "./views/maps/FullScreenMap.jsx";
 import ReactTables from "./views/tables/ReactTables.jsx";
 import RegularTables from "./views/tables/RegularTables.jsx";
 import ExtendedTables from "./views/tables/ExtendedTables.jsx";
@@ -28,9 +25,6 @@ import Calendar from "./views/Calendar.jsx";
 import Widgets from "./views/Widgets.jsx";
 import Charts from "./views/Charts.jsx";
 import Dashboard from "./views/Dashboard.jsx";
-// import Register from "./views/users/Register.jsx";
-// import Login from "./views/users/Login.jsx";
-// import Lock from "./views/users/Lock.jsx";
 import Buttons from "./views/components/Buttons.jsx";
 import SweetAlert from "./views/components/SweetAlert.jsx";
 import Notifications from "./views/components/Notifications.jsx";
@@ -38,12 +32,12 @@ import Grid from "./views/components/Grid.jsx";
 import Typography from "./views/components/Typography.jsx";
 import Panels from "./views/components/Panels.jsx";
 import Icons from "./views/components/Icons.jsx";
-import Pricing from "./views/pages/Pricing.jsx";
-import Register from "./views/pages/Register.jsx";
-import Login from "./views/pages/Login.jsx";
-import Rtl from "./views/pages/Rtl.jsx";
-import Lock from "./views/pages/Lock.jsx";
-
+import Register from "./views/users/Register.jsx";
+import Login from "./views/users/Login.jsx";
+import Lock from "./views/users/Lock.jsx";
+import GoogleMaps from  './views/maps/GoogleMaps';
+import FullScreenMap from './views/maps/FullScreenMap';
+import VectorMap from './views/maps/VectorMap';
 const routes = [
   {
     path: "/dashboard",
@@ -60,88 +54,88 @@ const routes = [
     icon: "tim-icons icon-molecule-40",
     state: "componentsCollapse",
     views: [
-      // {
-      //   collapse: true,
-      //   name: "Multi Level Collapse",
-      //   rtlName: "انهيار متعدد المستويات",
-      //   mini: "MLT",
-      //   rtlMini: "ر",
-      //   state: "multiCollapse",
-      //   views: [
-      //     {
-      //       path: "/buttons",
-      //       name: "Buttons",
-      //       rtlName: "وصفت",
-      //       mini: "B",
-      //       rtlMini: "ب",
-      //       component: Buttons,
-      //       layout: "/admin"
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: "/buttons",
-      //   name: "Buttons",
-      //   rtlName: "وصفت",
-      //   mini: "B",
-      //   rtlMini: "ب",
-      //   component: Buttons,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/grid-system",
-      //   name: "Grid System",
-      //   rtlName: "نظام الشبكة",
-      //   mini: "GS",
-      //   rtlMini: "زو",
-      //   component: Grid,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/panels",
-      //   name: "Panels",
-      //   rtlName: "لوحات",
-      //   mini: "P",
-      //   rtlMini: "ع",
-      //   component: Panels,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/sweet-alert",
-      //   name: "Sweet Alert",
-      //   rtlName: "الحلو تنبيه",
-      //   mini: "SA",
-      //   rtlMini: "ومن",
-      //   component: SweetAlert,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/notifications",
-      //   name: "Notifications",
-      //   rtlName: "إخطارات",
-      //   mini: "N",
-      //   rtlMini: "ن",
-      //   component: Notifications,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/icons",
-      //   name: "Icons",
-      //   rtlName: "الرموز",
-      //   mini: "I",
-      //   rtlMini: "و",
-      //   component: Icons,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/typography",
-      //   name: "Typography",
-      //   rtlName: "طباعة",
-      //   mini: "T",
-      //   rtlMini: "ر",
-      //   component: Typography,
-      //   layout: "/admin"
-      // }
+      {
+        collapse: true,
+        name: "Multi Level Collapse",
+        rtlName: "انهيار متعدد المستويات",
+        mini: "MLT",
+        rtlMini: "ر",
+        state: "multiCollapse",
+        views: [
+          {
+            path: "/buttons",
+            name: "Buttons",
+            rtlName: "وصفت",
+            mini: "B",
+            rtlMini: "ب",
+            component: Buttons,
+            layout: "/admin"
+          }
+        ]
+      },
+      {
+        path: "/buttons",
+        name: "Buttons",
+        rtlName: "وصفت",
+        mini: "B",
+        rtlMini: "ب",
+        component: Buttons,
+        layout: "/admin"
+      },
+      {
+        path: "/grid-system",
+        name: "Grid System",
+        rtlName: "نظام الشبكة",
+        mini: "GS",
+        rtlMini: "زو",
+        component: Grid,
+        layout: "/admin"
+      },
+      {
+        path: "/panels",
+        name: "Panels",
+        rtlName: "لوحات",
+        mini: "P",
+        rtlMini: "ع",
+        component: Panels,
+        layout: "/admin"
+      },
+      {
+        path: "/sweet-alert",
+        name: "Sweet Alert",
+        rtlName: "الحلو تنبيه",
+        mini: "SA",
+        rtlMini: "ومن",
+        component: SweetAlert,
+        layout: "/admin"
+      },
+      {
+        path: "/notifications",
+        name: "Notifications",
+        rtlName: "إخطارات",
+        mini: "N",
+        rtlMini: "ن",
+        component: Notifications,
+        layout: "/admin"
+      },
+      {
+        path: "/icons",
+        name: "Icons",
+        rtlName: "الرموز",
+        mini: "I",
+        rtlMini: "و",
+        component: Icons,
+        layout: "/admin"
+      },
+      {
+        path: "/typography",
+        name: "Typography",
+        rtlName: "طباعة",
+        mini: "T",
+        rtlMini: "ر",
+        component: Typography,
+        layout: "/admin"
+      }
     ]
   },
   {
@@ -151,42 +145,42 @@ const routes = [
     icon: "tim-icons icon-notes",
     state: "formsCollapse",
     views: [
-      // {
-      //   path: "/regular-forms",
-      //   name: "Regular Forms",
-      //   rtlName: "أشكال عادية",
-      //   mini: "RF",
-      //   rtlMini: "صو",
-      //   component: RegularForms,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/extended-forms",
-      //   name: "Extended Forms",
-      //   rtlName: "نماذج موسعة",
-      //   mini: "EF",
-      //   rtlMini: "هوو",
-      //   component: ExtendedForms,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/validation-forms",
-      //   name: "Validation Forms",
-      //   rtlName: "نماذج التحقق من الصحة",
-      //   mini: "VF",
-      //   rtlMini: "تو",
-      //   component: ValidationForms,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/wizard",
-      //   name: "Wizard",
-      //   rtlName: "ساحر",
-      //   mini: "W",
-      //   rtlMini: "ث",
-      //   component: Wizard,
-      //   layout: "/admin"
-      // }
+      {
+        path: "/regular-forms",
+        name: "Regular Forms",
+        rtlName: "أشكال عادية",
+        mini: "RF",
+        rtlMini: "صو",
+        component: RegularForms,
+        layout: "/admin"
+      },
+      {
+        path: "/extended-forms",
+        name: "Extended Forms",
+        rtlName: "نماذج موسعة",
+        mini: "EF",
+        rtlMini: "هوو",
+        component: ExtendedForms,
+        layout: "/admin"
+      },
+      {
+        path: "/validation-forms",
+        name: "Validation Forms",
+        rtlName: "نماذج التحقق من الصحة",
+        mini: "VF",
+        rtlMini: "تو",
+        component: ValidationForms,
+        layout: "/admin"
+      },
+      {
+        path: "/wizard",
+        name: "Wizard",
+        rtlName: "ساحر",
+        mini: "W",
+        rtlMini: "ث",
+        component: Wizard,
+        layout: "/admin"
+      }
     ]
   },
   {
@@ -232,66 +226,75 @@ const routes = [
     icon: "tim-icons icon-pin",
     state: "mapsCollapse",
     views: [
-      // {
-      //   path: "/google-maps",
-      //   name: "Google Maps",
-      //   rtlName: "خرائط جوجل",
-      //   mini: "GM",
-      //   rtlMini: "زم",
-      //   component: GoogleMaps,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/full-screen-map",
-      //   name: "Full Screen Map",
-      //   rtlName: "خريطة كاملة الشاشة",
-      //   mini: "FSM",
-      //   rtlMini: "ووم",
-      //   component: FullScreenMap,
-      //   layout: "/admin"
-      // },
-      // {
-      //   path: "/vector-map",
-      //   name: "Vector Map",
-      //   rtlName: "خريطة المتجه",
-      //   mini: "VM",
-      //   rtlMini: "تم",
-      //   component: VectorMap,
-      //   layout: "/admin"
-      // }
+      {
+        path: "/google-maps",
+        name: "Google Maps",
+        rtlName: "خرائط جوجل",
+        mini: "GM",
+        rtlMini: "زم",
+        component: GoogleMaps,
+        layout: "/admin"
+      },
+      {
+        path: "/full-screen-map",
+        name: "Full Screen Map",
+        rtlName: "خريطة كاملة الشاشة",
+        mini: "FSM",
+        rtlMini: "ووم",
+        component: FullScreenMap,
+        layout: "/admin"
+      },
+      {
+        path: "/vector-map",
+        name: "Vector Map",
+        rtlName: "خريطة المتجه",
+        mini: "VM",
+        rtlMini: "تم",
+        component: VectorMap,
+        layout: "/admin"
+      }
     ]
   },
 	{
     path: "/register",
-    name: "Widgets",
+    name: "Calendar",
     rtlName: "الحاجيات",
-    icon: "tim-icons icon-settings",
-    component: Register,
+    icon: "tim-icons icon-time-alarm",
+    component: Calendar,
     layout: "/admin"
   },
   {
     path: "/login",
-    name: "Charts",
+    name: "Widgets",
     rtlName: "الرسوم البيانية",
-    icon: "tim-icons icon-chart-bar-32",
-    component: Login,
+    icon: "tim-icons icon-settings",
+    component: Widgets,
     layout: "/admin"
   },
   {
     path: "/lock-screen",
-    name: "Calendar",
+    name: "Charts",
     rtlName: "التقويم",
-    icon: "tim-icons icon-time-alarm",
-    component: Lock,
+    icon: "tim-icons icon-chart-bar-32",
+    component: Charts,
     layout: "/admin"
 	},
 	{
     collapse: true,
     name: "ຂໍ້ມູນຜູ້ໃຊ້",
     rtlName: "صفحات",
-    icon: "tim-icons icon-image-02",
+    icon: "tim-icons icon-single-02",
     state: "pagesCollapse",
     views: [
+			{
+        path: "/register",
+        name: "Register",
+        rtlName: "تسجيل",
+        mini: "R",
+        rtlMini: "صع",
+        component: Register,
+        layout: "/auth"
+      },
       {
         path: "/login",
         name: "Login",
@@ -302,17 +305,8 @@ const routes = [
         layout: "/auth"
       },
       {
-        path: "/register",
-        name: "Register",
-        rtlName: "تسجيل",
-        mini: "R",
-        rtlMini: "صع",
-        component: Register,
-        layout: "/auth"
-      },
-      {
         path: "/lock-screen",
-        name: "Lock Screen",
+        name: "Lock",
         rtlName: "اقفل الشاشة",
         mini: "LS",
         rtlMini: "هذاع",

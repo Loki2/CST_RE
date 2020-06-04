@@ -143,7 +143,7 @@ class Register extends React.Component {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Sign Up
                     </Button>
                   </CardFooter>
                 </Card>
