@@ -16,8 +16,8 @@ const { checkToken } = require('./auth/token_validation');
  **** Import All Routes
  */
 const allowCode = require('./apis/allowcode/allowcode.Router');
-const serviceCategory = require('./apis/service_category');
-const serviceType = require('./apis/service_type');
+const serviceCategory = require('./apis/service_cats/service_category');
+const serviceType = require('./apis/service_type/service_type');
 const clients = require('./apis/clients/client.Router');
 const userRouter = require('./apis/users/users.Router');
 const employeeRoute = require('./apis/employees/employees.Router');

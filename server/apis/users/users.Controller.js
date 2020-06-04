@@ -10,6 +10,9 @@ const {
 
 
 module.exports = {
+	/**
+	 * **********Create User By Register or Super Admin Controller Access
+	**/
 	createUser: (req, res) => {
 		const body = req.body;
 		const salt = getSaltSync(10);
@@ -58,7 +61,11 @@ module.exports = {
 			});
 		  }
 		});
-	  },
+		},
+		
+/**
+ * **********Query all Users
+**/
 	getUsers: (req, res) => {
 		getUsers((err, results) => {
 			if(err) {
@@ -71,6 +78,10 @@ module.exports = {
 			});
 		});
 	},
+
+/**
+ * **********Query by User ID
+**/
 	getByUserId: (req, res, next) =>{
 		const user_id = req.params.user_id;
 		getByUserId(user_id, (err, results) => {
@@ -90,6 +101,9 @@ module.exports = {
 			 });
 		});
 	},
+	/**
+ * **********Update User
+**/
 	updateUser: (req, res) => {
 		const body = req.body;
 		const salt = getSaltSync(10);
@@ -105,6 +119,9 @@ module.exports = {
 			});
 		});
 	},
+/**
+ * **********Delete User
+**/ 
 	delUser: (req, res) => {
 		const data = req.body;
 		delUser(data, (err, results) => {
