@@ -95,7 +95,7 @@ class Register extends React.Component {
                       alt="..."
                       src={require("../../assets/img/card-primary.png")}
                     />
-                    <CardTitle tag="h4">Register</CardTitle>
+                    <CardTitle tag="h4">ສ້າງບັນຊີລະບົບ</CardTitle>
                   </CardHeader>
                   <CardBody>
                     <Form className="form">
@@ -105,7 +105,7 @@ class Register extends React.Component {
                             <i className="tim-icons icon-single-02" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Full Name" type="text" />
+                        <Input placeholder="ປ້ອນຊື່ເຕັມ" type="text" />
                       </InputGroup>
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
@@ -113,7 +113,7 @@ class Register extends React.Component {
                             <i className="tim-icons icon-email-85" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
+                        <Input placeholder="ປ້ອນອິເມວ: example@example.com" type="email" />
                       </InputGroup>
                       <InputGroup>
                         <InputGroupAddon addonType="prepend">
@@ -121,12 +121,12 @@ class Register extends React.Component {
                             <i className="tim-icons icon-lock-circle" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input placeholder="Password" type="text" />
+                        <Input placeholder="ປ້ັອນລະຫັດຜ່ານ" type="password" />
                       </InputGroup>
                       <FormGroup check className="text-left">
                         <Label check>
                           <Input type="checkbox" />
-                          <span className="form-check-sign" />I agree to the{" "}
+                          <span className="form-check-sign" />ຂ້ອຍຍ້ອມຣັບສິດທິສ່ວນບຸກຄົນຂອງການໃຊ້ລະບົບ{" "}
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             terms and conditions
                           </a>
@@ -143,7 +143,7 @@ class Register extends React.Component {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Sign Up
+                      Register
                     </Button>
                   </CardFooter>
                 </Card>

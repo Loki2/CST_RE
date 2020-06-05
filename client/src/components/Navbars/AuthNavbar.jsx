@@ -86,22 +86,22 @@ class AuthNavbar extends React.Component {
                   className="nav-link text-primary"
                 >
                   <i className="tim-icons icon-minimal-left" /> 
-									Back to Dashboard 	{/* Check User Authentication -> if(!user) then return back to Register or Login*/}
+									ກັບໄປໝ້າລັກ 	{/* Check User Authentication -> if(!user) then return back to Register or Login*/}
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/auth/register" className="nav-link">
-                  <i className="tim-icons icon-laptop" /> Register
+                  <i className="tim-icons icon-laptop" /> ໝ້າສ້າງບັນຊີ
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/auth/login" className="nav-link">
-                  <i className="tim-icons icon-single-02" /> Login
+                  <i className="tim-icons icon-single-02" /> ໝ້າເຂົາໃຊ້ລະບົບ
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/auth/lock-screen" className="nav-link">
-                  <i className="tim-icons icon-lock-circle" /> Lock
+                  <i className="tim-icons icon-lock-circle" /> ລັອກໝ້າຈໍ
                 </NavLink>
               </NavItem>
             </Nav>

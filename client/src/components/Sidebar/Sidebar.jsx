@@ -206,8 +206,8 @@ class Sidebar extends React.Component {
         <div className="sidebar-wrapper" ref="sidebar">
           {logoImg !== null || logoText !== null ? (
             <div className="logo">
-              {logoImg}
-              {logoText}
+              {/* {logoImg}
+              {logoText} */}
             </div>
           ) : null}
           <Nav>{this.createLinks(this.props.routes)}</Nav>

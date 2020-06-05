@@ -73,7 +73,7 @@ const dataTable = [
   ["Tiger Nixon", "System Architect", "Edinburgh", "61"]
 ];
 
-class ReactTables extends Component {
+class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -222,4 +222,4 @@ class ReactTables extends Component {
   }
 }
 
-export default ReactTables;
+export default Products;

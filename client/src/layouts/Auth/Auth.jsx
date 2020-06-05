@@ -64,8 +64,6 @@ class Pages extends React.Component {
   getFullPageName = routes => {
     let pageName = this.getActiveRoute(routes);
     switch (pageName) {
-      case "Pricing":
-        return "pricing-page";
       case "Login":
         return "login-page";
       case "Register":
@@ -82,7 +80,7 @@ class Pages extends React.Component {
   render() {
     return (
       <>
-        <AuthNavbar brandText={this.getActiveRoute(routes) + " Page"} />
+        <AuthNavbar brandText={this.getActiveRoute(routes)} /> {/* Add page title here */}
         <div className="wrapper wrapper-full-page" ref="fullPages">
           <div className={"full-page " + this.getFullPageName(routes)}>
             <Switch>{this.getRoutes(routes)}</Switch>

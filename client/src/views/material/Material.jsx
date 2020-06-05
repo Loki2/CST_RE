@@ -73,7 +73,7 @@ const dataTable = [
   ["Tiger Nixon", "System Architect", "Edinburgh", "61"]
 ];
 
-class ReactTables extends Component {
+class Materials extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -170,13 +170,13 @@ class ReactTables extends Component {
       <>
         <div className="content">
           <Col md={8} className="ml-auto mr-auto">
-            <h2 className="text-center">ຕາຕະລາງຂໍ້ມູນສີນຄ້າ</h2>
+            <h2 className="text-center">ຕາຕະລາງຂໍ້ມູນວັດຖຸດິບ</h2>
           </Col>
           <Row className="mt-5">
             <Col xs={12} md={12}>
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">ລາຍລະອຽດຂໍ້ມູນສີນຄ້າທັງຫມົດ</CardTitle>
+                  <CardTitle tag="h4">ລາຍລະອຽດຂໍ້ມູນວັດຖຸດິບທັງຫມົດ</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <ReactTable
@@ -222,4 +222,4 @@ class ReactTables extends Component {
   }
 }
 
-export default ReactTables;
+export default Materials;

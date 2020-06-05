@@ -62,7 +62,7 @@ class Login extends React.Component {
                           <i className="tim-icons icon-email-85" />
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input placeholder="Email" type="text" />
+                      <Input placeholder="ປ້ອນອິເມວ: example@example.com" type="email" />
                     </InputGroup>
                     <InputGroup>
                       <InputGroupAddon addonType="prepend">
@@ -70,7 +70,7 @@ class Login extends React.Component {
                           <i className="tim-icons icon-lock-circle" />
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input placeholder="Password" type="text" />
+                      <Input placeholder="ປ້ອນລະຫັດຜ່ານ" type="text" />
                     </InputGroup>
                   </CardBody>
                   <CardFooter>
@@ -82,7 +82,7 @@ class Login extends React.Component {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Login
                     </Button>
                     <div className="pull-left">
                       <h6>
@@ -91,7 +91,7 @@ class Login extends React.Component {
                           href="#pablo"
                           onClick={e => e.preventDefault()}
                         >
-                          Create Account
+                          ໄປໝ້າສ້າງບັນຊີ?
                         </a>
                       </h6>
                     </div>
@@ -102,7 +102,7 @@ class Login extends React.Component {
                           href="#pablo"
                           onClick={e => e.preventDefault()}
                         >
-                          Need Help?
+                          ຕ້ອງການຄວາມຊ່ວຍເຫລືອ?
                         </a>
                       </h6>
                     </div>

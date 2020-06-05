@@ -50,14 +50,14 @@ class Lock extends React.Component {
                   <img alt="..." src={require("../../assets/img/emilyz.jpg")} />
                 </CardHeader>
                 <CardBody>
-                  <CardTitle tag="h4">Joe Gardner</CardTitle>
+                  <CardTitle tag="h4">ນ. ເຂັມວີໄສ</CardTitle>
                   <InputGroup>
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>
                         <i className="tim-icons icon-key-25" />
                       </InputGroupText>
                     </InputGroupAddon>
-                    <Input placeholder="Password" type="text" />
+                    <Input placeholder="ປ້ອນລະຫັດຜ່ານຂອງທ່ານ" type="text" />
                   </InputGroup>
                 </CardBody>
                 <CardFooter>
