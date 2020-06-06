@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import RegularTables from "./views/tables/RegularTables.jsx";
 import ExtendedTables from "./views/tables/ExtendedTables.jsx";
 import Wizard from "./views/forms/Wizard.jsx";
@@ -35,6 +19,7 @@ import Clients from "./views/clients/Client.jsx";
 import Employee from "./views/employee/Employee.jsx";
 import EmployeeType from "./views/employee/EmpoloyeeType.jsx";
 import Dept from "./views/employee/Dept.jsx";
+import User from "./views/users/User.jsx";
 const routes = [
   {
     path: "/dashboard",
@@ -266,6 +251,13 @@ const routes = [
     icon: "tim-icons icon-single-02",
     state: "pagesCollapse",
     views: [
+			{
+				path:"/user",
+				name:"ຂໍ້ມູນສ່ວນຕົວ",
+				mini: "PF",
+				component: User,
+				layout: "/admin"
+			},
 			{
         path: "/register",
         name: "ລົງທະບຽນບັນຊີໃຫມ່",

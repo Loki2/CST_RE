@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
 import React from "react";
 import { Container, Row } from "reactstrap";
@@ -32,7 +16,7 @@ class Footer extends React.Component {
             © {new Date().getFullYear()} Power{" "}
             <i className="tim-icons icon-heart-2" /> by{" "}
 						<li className="nav-item">
-              <a className="nav-link" href="https://www.creative-tim.com">
+              <a className="nav-link" href="https://www.softniz-ishika.com">
                 <strong><h5>Softniz-iShika</h5></strong> 
               </a>
             </li>

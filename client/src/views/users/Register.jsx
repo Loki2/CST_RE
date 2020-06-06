@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -56,11 +40,7 @@ class Register extends React.Component {
                     <i className="tim-icons icon-wifi" />
                   </div>
                   <div className="description">
-                    <h3 className="info-title">Marketing</h3>
-                    <p className="description">
-                      We've created the marketing campaign of the website. It
-                      was a very interesting collaboration.
-                    </p>
+                    <h3 className="info-title">ການຕະຫລາດຂອງ Logistics</h3>
                   </div>
                 </div>
                 <div className="info-area info-horizontal">
@@ -68,11 +48,7 @@ class Register extends React.Component {
                     <i className="tim-icons icon-triangle-right-17" />
                   </div>
                   <div className="description">
-                    <h3 className="info-title">Fully Coded in HTML5</h3>
-                    <p className="description">
-                      We've developed the website with HTML5 and CSS3. The
-                      client has access to the code using GitHub.
-                    </p>
+                    <h3 className="info-title">ສະມັດຕະພາບຂອງການສ້າງ Community</h3>
                   </div>
                 </div>
                 <div className="info-area info-horizontal">
@@ -80,11 +56,7 @@ class Register extends React.Component {
                     <i className="tim-icons icon-trophy" />
                   </div>
                   <div className="description">
-                    <h3 className="info-title">Built Audience</h3>
-                    <p className="description">
-                      There is also a Fully Customizable CMS Admin Dashboard for
-                      this product.
-                    </p>
+                    <h3 className="info-title">ຄຸນນະພາບຂອງການໄວວ່າງໃຈກັບລູກຄ້າ</h3>
                   </div>
                 </div>
               </Col>

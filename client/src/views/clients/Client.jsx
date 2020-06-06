@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { Component } from "react";
 import classNames from "classnames";
 // react component for creating dynamic tables
@@ -80,10 +64,20 @@ class Clients extends Component {
       data: dataTable.map((prop, key) => {
         return {
           id: key,
-          name: prop[0],
-          position: prop[1],
-          office: prop[2],
-          age: prop[3],
+					name: prop[0],
+					company: prop[1],
+					cargos: prop[2],
+					address1: prop[3],
+					address2: prop[4],
+					city: prop[5],
+					state: prop[6],
+					country: prop[7],
+					contact: prop[8],
+					email: prop[9],
+					visit_date: prop[10],
+					create_date: prop[11],
+					status: prop[12],
+					create_by: prop[13],
           actions: (
             // we've added some custom button actions
             <div className="actions-right">
@@ -189,17 +183,41 @@ class Clients extends Component {
                         accessor: "name"
                       },
                       {
-                        Header: "Position",
-                        accessor: "position"
+                        Header: "Company Name",
+                        accessor: "company"
+											},
+											{
+                        Header: "Cargos",
+                        accessor: "cargos"
+											},
+											{
+												Header: "Address",
+												accessor: "address1"										
+											},
+                      {
+                        Header: "Contact No.",
+                        accessor: "contact"
                       },
                       {
-                        Header: "Office",
-                        accessor: "office"
-                      },
-                      {
-                        Header: "Age",
-                        accessor: "age"
-                      },
+                        Header: "Email",
+                        accessor: "email"
+											},
+											{
+                        Header: "Visit Date",
+                        accessor: "visit_date"
+											},
+											{
+                        Header: "Create Date",
+                        accessor: "create_date"
+											},
+											{
+                        Header: "Status",
+                        accessor: "status"
+											},
+											{
+                        Header: "Create By Operator",
+                        accessor: "create_by"
+											},
                       {
                         Header: "Actions",
                         accessor: "actions",
