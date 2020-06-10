@@ -154,25 +154,20 @@ class Admin extends React.Component {
         <div className="rna-container">
           <NotificationAlert ref="notificationAlert" />
         </div>
-        <div
-          className="navbar-minimize-fixed"
-          style={{ opacity: this.state.opacity }}
-        >
-          <button
-            className="minimize-sidebar btn btn-link btn-just-icon"
-            onClick={this.handleMiniClick}
-          >
+        <div className="navbar-minimize-fixed" style={{ opacity: this.state.opacity }}>
+          <button className="minimize-sidebar btn btn-link btn-just-icon" onClick={this.handleMiniClick}>
             <i className="tim-icons icon-align-center visible-on-sidebar-regular text-muted" />
             <i className="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted" />
           </button>
         </div>
+
         <Sidebar
           {...this.props}
           routes={routes}
           activeColor={this.state.activeColor}
           logo={{
-            outterLink: "https://www.creative-tim.com/",
-            text: "Creative Tim",
+            outterLink: "/",
+            text: "ລະບົບຈັດການຂົນສົ່ງສຳລັບອົງກອນ",
             imgSrc: logo
           }}
           closeSidebar={this.closeSidebar}

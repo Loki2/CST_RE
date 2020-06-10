@@ -38,8 +38,8 @@ class Wizard extends React.Component {
               steps={steps}
               navSteps
               validate
-              title="Build Your Profile"
-              description="This information will let us know more about you."
+              title="ສ້າງເອກສານກຳກັບການຂົນສົ່ງສິນຄ້າ"
+              description="ການຂົນສົ່ງສິນຄ້າຈະຕ້ອງນຳເອກະສານຕ່າງໆເຊັ່ນ: ໃບເສຍພາສິອາກອນ, ໃບອານຸຍາດການນຳເຂົາ ແລະສົ່ງອອກຂອງສີນຄ້າ"
               headerTextCenter
               finishButtonClasses="btn-wd btn-info"
               nextButtonClasses="btn-wd btn-info"

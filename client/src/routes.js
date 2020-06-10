@@ -20,11 +20,12 @@ import Employee from "./views/employee/Employee.jsx";
 import EmployeeType from "./views/employee/EmpoloyeeType.jsx";
 import Dept from "./views/employee/Dept.jsx";
 import User from "./views/users/User.jsx";
+import Import_report from "./views/reports/Import_report.jsx";
+import Export_report from "./views/reports/Export_report.jsx";
 const routes = [
   {
     path: "/dashboard",
     name: "ຫນ້າລັກ",
-    rtlName: "لوحة القيادة",
     icon: "tim-icons icon-chart-pie-36",
     component: Dashboard,
     layout: "/admin"
@@ -32,29 +33,9 @@ const routes = [
   {
     collapse: true,
     name: "ຈັດການຂໍ້ມູນພະນັກງານ",
-    rtlName: "المكونات",
     icon: "tim-icons icon-molecule-40",
     state: "componentsCollapse",
     views: [
-      // {
-      //   collapse: true,
-      //   name: "Multi Level Collapse",
-      //   rtlName: "انهيار متعدد المستويات",
-      //   mini: "MLT",
-      //   rtlMini: "ر",
-      //   state: "multiCollapse",
-      //   views: [
-      //     {
-      //       path: "/buttons",
-      //       name: "Buttons",
-      //       rtlName: "وصفت",
-      //       mini: "B",
-      //       rtlMini: "ب",
-      //       component: Buttons,
-      //       layout: "/admin"
-      //     }
-      //   ]
-      // },
       {
         path: "/employee",
         name: "ລາຍຊື່ພະນັກງານ",
@@ -117,7 +98,7 @@ const routes = [
   {
     collapse: true,
     name: "ຈັດການຂໍ້ມູນສ່າງ",
-    icon: "tim-icons icon-notes",
+    icon: "tim-icons icon-bank",
     state: "formsCollapse",
     views: [
       {
@@ -130,9 +111,7 @@ const routes = [
       {
         path: "/extended-forms",
         name: "ສີນຄ້າສົ່ງອອກ",
-        rtlName: "نماذج موسعة",
         mini: "EF",
-        rtlMini: "هوو",
         component: ExtendedForms,
         layout: "/admin"
       },
@@ -144,10 +123,10 @@ const routes = [
         layout: "/admin"
       },
       {
-        path: "/wizard",
+        path: "/widgets",
         name: "ຂໍ້ມູນວັດຖຸດິບສາມາດສົ່ງອອກ",
         mini: "W",
-        component: Wizard,
+        component: Widgets,
         layout: "/admin"
       }
     ]
@@ -155,8 +134,7 @@ const routes = [
   {
     collapse: true,
     name: "ຈັດການຂໍ້ມູນສີນຄ້າ",
-    rtlName: "الجداول",
-    icon: "tim-icons icon-puzzle-10",
+    icon: "tim-icons icon-coins",
     state: "tablesCollapse",
     views: [
 			{
@@ -183,9 +161,7 @@ const routes = [
       {
         path: "/regular-tables",
         name: "Regular Tables",
-        rtlName: "طاولات عادية",
         mini: "RT",
-        rtlMini: "صر",
         component: RegularTables,
         layout: "/admin"
       }
@@ -194,7 +170,7 @@ const routes = [
   {
     collapse: true,
     name: "ຈັດການຂໍ້ມູນລູກຄ້າ",
-    icon: "tim-icons icon-pin",
+    icon: "tim-icons icon-user-run",
     state: "mapsCollapse",
     views: [
       {
@@ -207,18 +183,14 @@ const routes = [
       {
         path: "/full-screen-map",
         name: "Full Screen Map",
-        rtlName: "خريطة كاملة الشاشة",
         mini: "FSM",
-        rtlMini: "ووم",
         component: FullScreenMap,
         layout: "/admin"
       },
       {
         path: "/vector-map",
         name: "Vector Map",
-        rtlName: "خريطة المتجه",
         mini: "VM",
-        rtlMini: "تم",
         component: VectorMap,
         layout: "/admin"
       }
@@ -235,7 +207,7 @@ const routes = [
     path: "/qualtation-job",
     name: "ສ້າງ Qualtation",
     icon: "tim-icons icon-settings",
-    component: Widgets,
+    component: Wizard,
     layout: "/admin"
   },
   {
@@ -244,6 +216,28 @@ const routes = [
     icon: "tim-icons icon-chart-bar-32",
     component: Charts,
     layout: "/admin"
+	},
+	{
+		collapse: true,
+    name: "ລາຍງານນຳເຂົາ ແລະສົ່ງອອກ",
+    icon: "tim-icons icon-paper",
+    state: "ReportCollapse",
+    views: [
+			{
+				path: "/export-report",
+				name: "ລາຍງານການສົ່ງອອກ",
+				mini: "EM-R",
+				component: Export_report,
+				layout: "/admin"
+			},
+			{
+				path: "/import-report",
+				name: "ລາຍງານການນຳເຂົາ",
+				mini: "IM-R",
+				component: Import_report,
+				layout: "/admin"
+			}
+		]
 	},
 	{
     collapse: true,

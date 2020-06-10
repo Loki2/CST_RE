@@ -2,14 +2,36 @@ const express = require("express");
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+// const compression = require('compression'); //Just need to install this packages
+const path = require('path');
 //const config = require('./config/database');
-const { checkToken } = require('./auth/token_validation');
+// const { checkToken } = require('./auth/token_validation');
 
 
 /*
  **** Users Credential Authentication
  */
 //const usersCredential = require('./routes/users')
+
+/*
+ **** Check If Production mode
+ */
+const dev = app.get('env') !== 'production';
+if(!dev) {
+	app.disable('x-powered-by');
+	// app.use(compression());
+	app.use(morgan('common'));
+
+	app.use(express.static(path.resolve(__dirname, 'client/build')));
+
+	app.use('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
+	})
+}
+
+if(dev) {
+	app.use(morgan('dev'));
+}
 
 
 /*
@@ -42,6 +64,7 @@ app.use((req, res, next) => {
     }
     next();
 });
+
 
 /*
  **** Users routes Credential Authentication
